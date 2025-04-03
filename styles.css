@@ -11,8 +11,13 @@ p {
   font-weight: 400;
 }
 
-a, a:link, a:visited, a:focus, a:hover, a:active{
-  color:#37352f;
+a,
+a:link,
+a:visited,
+a:focus,
+a:hover,
+a:active {
+  color: #37352f;
 }
 
 .content {
@@ -144,15 +149,15 @@ h4 {
 }
 
 @keyframes fadeInOpacity {
-	0% {
-		opacity: 0;
-	}
+  0% {
+    opacity: 0;
+  }
   25% {
     opacity: 0;
   }
-	100% {
-		opacity: 1;
-	}
+  100% {
+    opacity: 1;
+  }
 }
 
 .days-between-number-of-days {

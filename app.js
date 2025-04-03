@@ -91,27 +91,27 @@ document.getElementById("days-between-go").onclick = function () {
       "days-between-result-wrapper"
     )[0].style.display = "block";
   }
-
-  /* Generate google calendar link */
-  function formatDateForGoogleCalendar(date) {
-    return (
-      date.getFullYear() +
-      ("0" + (date.getMonth() + 1)).slice(-2) +
-      ("0" + date.getDate()).slice(-2)
-    );
-  }
-
-  function generateGoogleCalendarLink(eventTitle, eventDate) {
-    let baseUrl = "https://calendar.google.com/calendar/render?action=TEMPLATE";
-    let formattedDate = formatDateForGoogleCalendar(eventDate);
-
-    let calendarUrl = `${baseUrl}&text=${encodeURIComponent(
-      eventTitle
-    )}&dates=${formattedDate}/${formattedDate}`;
-
-    return calendarUrl;
-  }
 };
+
+/* Generate google calendar link */
+function formatDateForGoogleCalendar(date) {
+  return (
+    date.getFullYear() +
+    ("0" + (date.getMonth() + 1)).slice(-2) +
+    ("0" + date.getDate()).slice(-2)
+  );
+}
+
+function generateGoogleCalendarLink(eventTitle, eventDate) {
+  let baseUrl = "https://calendar.google.com/calendar/render?action=TEMPLATE";
+  let formattedDate = formatDateForGoogleCalendar(eventDate);
+
+  let calendarUrl = `${baseUrl}&text=${encodeURIComponent(
+    eventTitle
+  )}&dates=${formattedDate}/${formattedDate}`;
+
+  return calendarUrl;
+}
 
 /* Visa left */
 
