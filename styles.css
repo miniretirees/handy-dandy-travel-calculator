@@ -1,0 +1,387 @@
+body {
+  font-family: "Sometype Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #37352f;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+a, a:link, a:visited, a:focus, a:hover, a:active{
+  color:#37352f;
+}
+
+.content {
+  min-width: 320px;
+  max-width: 377px;
+  height: 100vh;
+  margin: auto;
+  padding: 12px;
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+  padding: 8px 0 4px 0;
+}
+
+.find-options {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 28px;
+}
+
+.find-options p {
+  margin: 8px 0 6px 0;
+}
+
+select {
+  width: 100%;
+  height: 32px;
+  border: none;
+  font-family: "Sometype Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  color: #37352f;
+  font-size: 17px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-align: start;
+  background-color: white;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+input {
+  width: auto;
+  height: 32px;
+  padding: 0 6px 0 6px;
+  font-family: "Sometype Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #37352f;
+  font-size: 16px;
+  border: 1px solid #a8a8a8;
+  border-radius: 4px;
+  -webkit-appearance: none;
+  background-color: white;
+}
+
+input::-webkit-date-and-time-value {
+  text-align: left;
+}
+
+label {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+button {
+  background-color: #37352f;
+  border: none;
+  height: 36px;
+  border-radius: 4px;
+  font-family: "Sometype Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  color: #f4f4f4;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #454545;
+}
+
+h4 {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Check-in and out styling */
+.days-between-result-wrapper {
+  display: none;
+}
+
+.days-between-result {
+  height: 100%;
+  width: auto;
+  background-color: #fcf3db;
+  border-radius: 8px;
+  margin: 20px 0 0 0;
+  padding: 12px 20px 12px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.days-between-result p {
+  margin: 0;
+}
+
+#buycoffee {
+  padding-top: 4px;
+  animation-name: fadeInOpacity;
+  animation-duration: 3s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+  25% {
+    opacity: 0;
+  }
+	100% {
+		opacity: 1;
+	}
+}
+
+.days-between-number-of-days {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#days-between-number-of-days {
+  font-weight: 600;
+}
+
+.days-between-number-of-nights {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#days-between-number-of-nights {
+  font-weight: 600;
+}
+
+/* Visa styling */
+
+.visa-left {
+  display: none;
+}
+
+.visa-left-result-wrapper {
+  display: none;
+}
+
+.visa-left-result {
+  height: 100%;
+  width: auto;
+  background-color: #fcf3db;
+  border-radius: 8px;
+  margin: 20px 0 0 0;
+  padding: 12px 20px 12px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.visa-left-result p {
+  margin: 0;
+}
+
+.visa-days-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#visa-days-left {
+  font-weight: 600;
+}
+
+.visa-last-stay-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+}
+
+#visa-last-stay-date {
+  font-weight: 600;
+}
+
+/* Data styling */
+
+.data-left {
+  display: none;
+}
+
+.data-left-result-wrapper {
+  display: none;
+}
+
+.data-left-result {
+  height: 100%;
+  width: auto;
+  background-color: #fcf3db;
+  border-radius: 8px;
+  margin: 20px 0 0 0;
+  padding: 12px 20px 12px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.data-left-result p {
+  margin: 0;
+}
+
+.data-days-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#data-days-left {
+  font-weight: 600;
+}
+
+.data-last-usage-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+}
+
+#data-last-usage-date {
+  font-weight: 600;
+}
+
+/* Medication styling */
+
+.medication-left {
+  display: none;
+}
+
+.medication-left-result-wrapper {
+  display: none;
+}
+
+.medication-left-result {
+  height: 100%;
+  width: auto;
+  background-color: #fcf3db;
+  border-radius: 8px;
+  margin: 20px 0 0 0;
+  padding: 12px 20px 12px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.medication-left-result p {
+  margin: 0;
+}
+
+.medication-pills-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#medication-pills-left {
+  font-weight: 600;
+}
+
+.medication-days-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#medication-days-left {
+  font-weight: 600;
+}
+
+.medication-last-pill-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#medication-last-pill-date {
+  font-weight: 600;
+}
+
+/* Screen size <376px */
+
+@media (max-width: 375px) {
+  .content {
+    padding: 6px;
+  }
+
+  .header {
+    padding: 0 0 6px 0;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .find-options {
+    padding-bottom: 20px;
+  }
+
+  .find-options p {
+    margin: 4px 0 2px 0;
+  }
+
+  select {
+    font-size: 15px;
+  }
+
+  .input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  input {
+    font-size: 14px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+  .days-between-result {
+    padding: 12px 16px 12px 16px;
+    gap: 8px;
+  }
+  .visa-left-result {
+    padding: 12px 16px 12px 16px;
+    gap: 8px;
+  }
+  .data-left-result {
+    padding: 12px 16px 12px 16px;
+    gap: 8px;
+  }
+  .medication-left-result {
+    padding: 12px 16px 12px 16px;
+    gap: 8px;
+  }
+}

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1"/>
+    <title>Handy dandy travel calculator</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="images/travel_calculator_icon.ico"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="content">
+      <div class="header">
+        <img
+          src="images/travel_calculator_logo.png"
+          alt="Handy dandy travel calculator logo"
+          width="320px"
+        />
+      </div>
+      <div class="find-options">
+        <p>I want to find</p>
+        <select id="find-options">
+          <option value="days-between">
+            Days/nights between check-in & out
+          </option>
+          <option value="visa-left">Days left on visa & last stay date</option>
+          <option value="data-left">Days left of data & last usage date</option>
+          <option value="medication-left">
+            Medication left & last pill date
+          </option>
+        </select>
+      </div>
+      <div class="days-between">
+        <div class="input-wrapper">
+          <div class="input">
+            <label for="check-in-date">Check-in date</label>
+            <input type="date" id="check-in-date" max="3000-12-12" />
+          </div>
+          <div class="input">
+            <label for="check-out-date">Check-out date</label>
+            <input type="date" id="check-out-date" max="3000-12-12" />
+          </div>
+          <button type="submit" id="days-between-go">GO →</button>
+        </div>
+        <div class="days-between-result-wrapper">
+          <div class="days-between-result">
+            <div class="days-between-number-of-days">
+              <p>☀️ Days</p>
+              <p id="days-between-number-of-days" aria-live="polite"></p>
+            </div>
+            <div class="days-between-number-of-nights">
+              <p>🌃 Nights</p>
+              <p id="days-between-number-of-nights" aria-live="polite"></p>
+            </div>
+          </div>
+          <p id="buycoffee">
+            If you found this useful, do consider
+            <a
+              href="https://buymeacoffee.com/miniretirees"
+              target="_blank"
+              title="Buy me a coffee"
+              >buying me a coffee!</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="visa-left">
+        <div class="input-wrapper">
+          <div class="input">
+            <label for="visa-arrival-date">Arrival date</label>
+            <input type="date" id="visa-arrival-date" max="3000-12-12" />
+          </div>
+          <div class="input">
+            <label for="visa-validity">Visa validity</label>
+            <input
+              type="number"
+              id="visa-validity"
+              placeholder="Number of days"
+              pattern="[0-9]*"
+            />
+          </div>
+          <button id="visa-left-go">GO →</button>
+        </div>
+        <div class="visa-left-result-wrapper">
+          <div class="visa-left-result">
+            <div class="visa-days-left">
+              <p>☀️ Days left</p>
+              <p id="visa-days-left" aria-live="polite"></p>
+            </div>
+            <div class="visa-last-stay-date">
+              <p>📅 Last stay date</p>
+              <p id="visa-last-stay-date" aria-live="polite"></p>
+            </div>
+            <div class="google-calendar-link">
+              <a id="visa-calendar-link" href="#" target="_blank"
+                >Add to google calendar</a
+              >
+            </div>
+          </div>
+          <p id="buycoffee">
+            If you found this useful, do consider
+            <a
+              href="https://buymeacoffee.com/miniretirees"
+              target="_blank"
+              title="Buy me a coffee"
+              >buying me a coffee!</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="data-left">
+        <div class="input-wrapper">
+          <div class="input">
+            <label for="data-start-date">Data start date</label>
+            <input type="date" id="data-start-date" max="3000-12-12" />
+          </div>
+          <div class="input">
+            <label for="data-validity">Data validity</label>
+            <input
+              type="number"
+              id="data-validity"
+              placeholder="Number of days"
+              pattern="[0-9]*"
+            />
+          </div>
+          <button id="data-left-go">GO →</button>
+        </div>
+        <div class="data-left-result-wrapper">
+          <div class="data-left-result">
+            <div class="data-days-left">
+              <p>☀️ Days left</p>
+              <p id="data-days-left" aria-live="polite"></p>
+            </div>
+            <div class="data-last-usage-date">
+              <p>📅 Last usage date</p>
+              <p id="data-last-usage-date" aria-live="polite"></p>
+            </div>
+            <div class="google-calendar-link">
+              <a id="data-calendar-link" href="#" target="_blank"
+                >Add to google calendar</a
+              >
+            </div>
+          </div>
+          <p id="buycoffee">
+            If you found this useful, do consider
+            <a
+              href="https://buymeacoffee.com/miniretirees"
+              target="_blank"
+              title="Buy me a coffee"
+              >buying me a coffee!</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="medication-left">
+        <div class="input-wrapper">
+          <div class="input">
+            <label for="first-pill-date">First pill date</label>
+            <input type="date" id="first-pill-date" max="3000-12-12" />
+          </div>
+          <div class="input">
+            <label for="pills-per-day">Pills per day</label>
+            <input
+              type="number"
+              id="pills-per-day"
+              placeholder="Number of pills per day"
+              pattern="[0-9]*"
+            />
+          </div>
+          <div class="input">
+            <label for="total-medication-supply">Total medication supply</label>
+            <input
+              type="number"
+              id="total-medication-supply"
+              placeholder="Total number of pills"
+              pattern="[0-9]*"
+            />
+          </div>
+          <button id="medication-left-go">GO →</button>
+        </div>
+        <div class="medication-left-result-wrapper">
+          <div class="medication-left-result">
+            <div class="medication-pills-left">
+              <p>💊 Pills left</p>
+              <p id="medication-pills-left" aria-live="polite"></p>
+            </div>
+            <div class="medication-days-left">
+              <p>☀️ Days left</p>
+              <p id="medication-days-left" aria-live="polite"></p>
+            </div>
+            <div class="medication-last-pill-date">
+              <p>📅 Last pill date</p>
+              <p id="medication-last-pill-date" aria-live="polite"></p>
+            </div>
+            <div class="google-calendar-link">
+              <a id="medication-calendar-link" href="#" target="_blank"
+                >Add to google calendar</a
+              >
+            </div>
+          </div>
+          <p id="buycoffee">
+            If you found this useful, do consider
+            <a
+              href="https://buymeacoffee.com/miniretirees"
+              target="_blank"
+              title="Buy me a coffee"
+              >buying me a coffee!</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
