@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (isMobileDevice()) {
       calendarLinks[i].style.display = "none";
     } else {
-      calendarLinks[i].style.display = "inline-block";
+      calendarLinks[i].style.display = "block";
     }
   }
 });
@@ -160,8 +160,6 @@ document.getElementById("visa-left-go").onclick = function () {
     document.getElementsByClassName(
       "visa-left-result-wrapper"
     )[0].style.display = "block";
-    document.getElementsByClassName("google-calendar-link")[0].style.display =
-      "block";
     let visaCalendarLink = generateGoogleCalendarLink(
       "Visa last stay date",
       visaLastStay
@@ -214,8 +212,6 @@ document.getElementById("data-left-go").onclick = function () {
     document.getElementsByClassName(
       "data-left-result-wrapper"
     )[0].style.display = "block";
-    document.getElementsByClassName("google-calendar-link")[1].style.display =
-      "block";
     let dataCalendarLink = generateGoogleCalendarLink(
       "Data last usage date",
       dataLastUsage
@@ -295,8 +291,6 @@ document.getElementById("medication-left-go").onclick = function () {
     document.getElementsByClassName(
       "medication-left-result-wrapper"
     )[0].style.display = "block";
-    document.getElementsByClassName("google-calendar-link")[2].style.display =
-      "block";
     let medicationCalendarLink = generateGoogleCalendarLink(
       "Medication last pill date",
       medicationLastPill
