@@ -78,8 +78,8 @@ document.getElementById("days-between-go").onclick = function () {
     daysBetweenDifferenceInTime =
       checkOutDate.getTime() - checkInDate.getTime();
     daysBetweenNumberOfDays =
-      Math.round(daysBetweenDifferenceInTime / (1000 * 3600 * 24)) + 1;
-    daysBetweenNumberOfNights = Math.round(
+      Math.floor(daysBetweenDifferenceInTime / (1000 * 3600 * 24)) + 1;
+    daysBetweenNumberOfNights = Math.floor(
       daysBetweenDifferenceInTime / (1000 * 3600 * 24)
     );
 
@@ -129,7 +129,7 @@ document.getElementById("visa-left-go").onclick = function () {
   );
   visaValidity = Number(document.getElementById("visa-validity").value);
   visaDifferenceInTime = new Date().getTime() - visaArrivalDate.getTime();
-  visaDaysElapsed = Math.round(visaDifferenceInTime / (1000 * 3600 * 24));
+  visaDaysElapsed = Math.floor(visaDifferenceInTime / (1000 * 3600 * 24));
   visaDaysLeft = visaValidity - visaDaysElapsed;
 
   if (visaValidity <= 0 || visaArrivalDate == "Invalid Date") {
@@ -182,7 +182,7 @@ document.getElementById("data-left-go").onclick = function () {
   dataStartDate = new Date(document.getElementById("data-start-date").value);
   dataValidity = Number(document.getElementById("data-validity").value);
   dataDifferenceInTime = new Date().getTime() - dataStartDate.getTime();
-  dataDaysElapsed = Math.round(dataDifferenceInTime / (1000 * 3600 * 24));
+  dataDaysElapsed = Math.floor(dataDifferenceInTime / (1000 * 3600 * 24));
   dataDaysLeft = dataValidity - dataDaysElapsed;
 
   if (dataValidity <= 0 || dataStartDate == "Invalid Date") {
@@ -246,7 +246,7 @@ document.getElementById("medication-left-go").onclick = function () {
   medicationNumberOfDays = medicationTotalSupply / medicationPillsPerDay;
   medicationDifferenceInTime =
     new Date().getTime() - medicationFirstPillDate.getTime();
-  medicationDaysElapsed = Math.round(
+  medicationDaysElapsed = Math.floor(
     medicationDifferenceInTime / (1000 * 3600 * 24)
   );
   medicationDaysLeft = medicationNumberOfDays - medicationDaysElapsed;
