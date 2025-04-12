@@ -213,7 +213,7 @@ document.getElementById("data-left-go").onclick = function () {
       "data-left-result-wrapper"
     )[0].style.display = "block";
     let dataCalendarLink = generateGoogleCalendarLink(
-      "Data last usage date",
+      "eSIM last use date",
       dataLastUsage
     );
     document.getElementById("data-calendar-link").href = dataCalendarLink;
